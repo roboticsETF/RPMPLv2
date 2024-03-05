@@ -7,6 +7,13 @@ project(
   DESCRIPTION "Rapid Prototyping Motion Planning Library"
   LANGUAGES CXX)
 
+  SET (CMAKE_CXX_COMPILER             "/usr/bin/clang++")
+  SET (CMAKE_CXX_FLAGS                "-Wall")
+  SET (CMAKE_CXX_FLAGS_DEBUG          "-g")
+  SET (CMAKE_CXX_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
+  SET (CMAKE_CXX_FLAGS_RELEASE        "-O4 -DNDEBUG")
+  SET (CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g")
+
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
