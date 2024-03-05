@@ -31,5 +31,5 @@ jobs:
       - name: Test (optional)
         run: |
           if [ -f build/tests ]; then
-            ctest -C Release --output-on-failure
+            ctest --test-dir build/tests -C Release --output-on-failure
           fi
